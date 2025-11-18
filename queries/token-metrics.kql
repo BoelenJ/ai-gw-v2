@@ -47,5 +47,4 @@ customMetrics
     TargetService,
     CallType,
     ServiceName
-| distinct *
 | order by timestamp desc
