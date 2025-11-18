@@ -57,9 +57,6 @@
         <!-- Store whether this is a streaming request for later use -->
         <set-variable name="isStreaming" value="@(context.Request.Body.As&lt;JObject&gt;(preserveContent: true)?[&quot;stream&quot;]?.Value&lt;bool&gt;() == true)" />
         
-        <!-- Capture start time for response time calculation -->
-        <set-variable name="requestStartTime" value="@(DateTime.UtcNow)" />
-        
         <!-- Emit Azure OpenAI token metrics to Application Insights -->
         <azure-openai-emit-token-metric namespace="AzureOpenAI">
             <dimension name="API ID" />

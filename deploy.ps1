@@ -28,7 +28,7 @@
 
 param(
     [Parameter()]
-    [string]$Environment = "acc",
+    [string]$Environment = "dev",
     
     [Parameter()]
     [string]$SubscriptionId,
