@@ -1,9 +1,8 @@
 {
     "resourceGroupNames": [
-        "rg-genai-gw-v2"
+        "rg-aigw"
     ],
     "tags": {
-        "ApplicationName": "GenAIGatewayV2",
-        "BusinessUnit": "AI CoE"
+        "ApplicationName": "GenAIGatewayV2"
     }
 }

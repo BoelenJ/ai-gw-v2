@@ -20,7 +20,7 @@ param openAILocations = [
       {
         deploymentName: 'gpt-4o-mini-2024-07-18'
         skuName: 'DataZoneStandard'
-        skuCapacity: 1
+        skuCapacity: 10
         name: 'gpt-4o-mini'
         version: '2024-07-18'
         format: 'OpenAI'
@@ -46,7 +46,7 @@ param openAILocations = [
       {
         deploymentName: 'gpt-4o-mini-2024-07-18'
         skuName: 'DataZoneStandard'
-        skuCapacity: 1
+        skuCapacity: 10
         name: 'gpt-4o-mini'
         version: '2024-07-18'
         format: 'OpenAI'
@@ -73,7 +73,7 @@ param openAILocations = [
       {
         deploymentName: 'gpt-4o-mini-2024-07-18'
         skuName: 'DataZoneStandard'
-        skuCapacity: 6
+        skuCapacity: 10
         name: 'gpt-4o-mini'
         version: '2024-07-18'
         format: 'OpenAI'

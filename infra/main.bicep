@@ -101,7 +101,7 @@ module apim 'modules/apim.bicep' = {
     publisherEmail: apimPublisherEmail
     publisherName: apimPublisherName
     managedIdentityId: managedIdentity.id
-    appInsightsInstrumentationKey: appInsights.outputs.instrumentationKey
+    appInsightsInstrumentationKey: appInsights.outputs.connectionString
     appInsightsId: appInsights.outputs.appInsightsId
   }
 }

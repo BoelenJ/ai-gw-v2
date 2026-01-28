@@ -89,19 +89,32 @@ resource openAIv1Api 'Microsoft.ApiManagement/service/apis@2023-09-01-preview' =
   }
 }
 
-// Application Insights logger
-resource apimLogger 'Microsoft.ApiManagement/service/loggers@2023-09-01-preview' = {
+resource identityClientIdNamedValue 'Microsoft.ApiManagement/service/namedValues@2024-10-01-preview' = {
+  name: 'application-connection-string'
+  parent: apimService
+  properties: {
+    displayName: 'application-connection-string'
+    value: appInsightsInstrumentationKey
+    secret: true
+  }
+}
+
+// Application Insights slogger
+resource apimLogger 'Microsoft.ApiManagement/service/loggers@2024-05-01' = {
   parent: apimService
   name: 'appinsights-logger'
   properties: {
     loggerType: 'applicationInsights'
     description: 'Application Insights logger for OpenAI APIs'
     credentials: {
-      instrumentationKey: appInsightsInstrumentationKey
+      connectionString: '{{application-connection-string}}'
     }
     isBuffered: true
     resourceId: appInsightsId
   }
+  dependsOn: [
+    identityClientIdNamedValue
+  ]
 }
 
 // Diagnostics for Azure OpenAI API
